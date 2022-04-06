@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# 
+# Start of session at: Fri Mar 25 18:44:28 2022
+# Process ID: 147812
+# Current directory: C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

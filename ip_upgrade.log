@@ -1,0 +1,174 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Fri Mar 25 18:25:45 2022
+| Host         : DVANOFFICE-071 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Adder_AXI4_IP_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Adder_AXI4_IP_0_0 (dali.local:user:Adder_AXI4_IP:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Fri Mar 25 18:00:28 2022
+| Host         : DVANOFFICE-071 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Adder_AXI4_IP_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Adder_AXI4_IP_0_0 (dali.local:user:Adder_AXI4_IP:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Fri Mar 25 15:38:40 2022
+| Host         : DVANOFFICE-071 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Adder_AXI4_IP_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Adder_AXI4_IP_0_0 (dali.local:user:Adder_AXI4_IP:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Fri Mar 25 15:10:22 2022
+| Host         : DVANOFFICE-071 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Adder_AXI4_IP_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Adder_AXI4_IP_0_0 (dali.local:user:Adder_AXI4_IP:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Fri Mar 25 14:06:24 2022
+| Host         : DVANOFFICE-071 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Adder_AXI4_IP_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Adder_AXI4_IP_0_0 (dali.local:user:Adder_AXI4_IP:1.0) from (Rev. 4) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Fri Mar 25 14:00:09 2022
+| Host         : DVANOFFICE-071 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Adder_AXI4_IP_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Adder_AXI4_IP_0_0 (dali.local:user:Adder_AXI4_IP:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Fri Mar 25 13:43:14 2022
+| Host         : DVANOFFICE-071 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Adder_AXI4_IP_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Adder_AXI4_IP_0_0 (dali.local:user:Adder_AXI4_IP:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Adder_AXI4_IP_0_0'.
+
+
+-Upgrade has added interface 'Reset_n' (xilinx.com:signal:reset:1.0)
+
+-Upgrade has added interface 's00_axi_aclk' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 's00_axi_aresetn' (xilinx.com:signal:reset:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Adder_AXI4_IP_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'ClK_100MHz_PLL'
+
+-Upgrade has added port 'Clk_10MHz_TXO'
+
+-Upgrade has added port 'FPGA_LED1'
+
+-Upgrade has added port 'FPGA_LED2'
+
+-Upgrade has added port 'Reset_n'
+
+

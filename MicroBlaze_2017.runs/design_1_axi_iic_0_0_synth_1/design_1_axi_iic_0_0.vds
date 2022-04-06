@@ -1,0 +1,177 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Mar 17 12:38:52 2022
+# Process ID: 20144
+# Current directory: C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.runs/design_1_axi_iic_0_0_synth_1
+# Command line: vivado.exe -log design_1_axi_iic_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_iic_0_0.tcl
+# Log file: C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.runs/design_1_axi_iic_0_0_synth_1/design_1_axi_iic_0_0.vds
+# Journal file: C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.runs/design_1_axi_iic_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_axi_iic_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 385.309 ; gain = 75.684
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_iic_0_0' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/synth/design_1_axi_iic_0_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'axi_iic' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
+INFO: [Synth 8-638] synthesizing module 'iic' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
+INFO: [Synth 8-638] synthesizing module 'axi_ipif_ssp1' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5661]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized20' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized20' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized21' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized21' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized22' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized22' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized23' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized23' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized24' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized24' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized25' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized25' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized26' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized26' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized27' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized27' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized28' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized28' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized29' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized29' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized30' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized30' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized31' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized31' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized32' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized32' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized33' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized33' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized34' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized34' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized35' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized35' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (5#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (6#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'axi_ipif_ssp1' (7#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5661]
+INFO: [Synth 8-638] synthesizing module 'reg_interface' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1677]
+INFO: [Synth 8-256] done synthesizing module 'reg_interface' (8#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1677]
+INFO: [Synth 8-638] synthesizing module 'filter' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:4985]
+INFO: [Synth 8-638] synthesizing module 'debounce' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1307]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (9#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (10#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1307]
+INFO: [Synth 8-256] done synthesizing module 'filter' (11#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:4985]
+INFO: [Synth 8-638] synthesizing module 'iic_control' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:2908]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (12#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-638] synthesizing module 'shift8' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:897]
+INFO: [Synth 8-256] done synthesizing module 'shift8' (13#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:897]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n__parameterized0' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n__parameterized0' (13#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-256] done synthesizing module 'iic_control' (14#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:2908]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-638] synthesizing module 'FDR' [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3951]
+INFO: [Synth 8-256] done synthesizing module 'FDR' (15#1) [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3951]
+INFO: [Synth 8-638] synthesizing module 'MUXCY_L' [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:21638]
+INFO: [Synth 8-256] done synthesizing module 'MUXCY_L' (16#1) [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:21638]
+INFO: [Synth 8-638] synthesizing module 'XORCY' [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:45685]
+INFO: [Synth 8-256] done synthesizing module 'XORCY' (17#1) [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:45685]
+INFO: [Synth 8-638] synthesizing module 'FDRE' [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (18#1) [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-638] synthesizing module 'SRL16E' [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:43673]
+INFO: [Synth 8-256] done synthesizing module 'SRL16E' (19#1) [C:/Xilinxx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:43673]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (20#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-638] synthesizing module 'dynamic_master' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5204]
+INFO: [Synth 8-256] done synthesizing module 'dynamic_master' (21#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5204]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO__parameterized0' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO__parameterized0' (21#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-256] done synthesizing module 'iic' (22#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
+INFO: [Synth 8-256] done synthesizing module 'axi_iic' (23#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_iic_0_0' (24#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/synth/design_1_axi_iic_0_0.vhd:91]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 435.406 ; gain = 125.781
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 435.406 ; gain = 125.781
+INFO: [Device 21-403] Loading part xc7k325tffg676-2
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 780.758 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 780.758 ; gain = 471.133
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 780.758 ; gain = 471.133
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 780.758 ; gain = 471.133
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 780.758 ; gain = 471.133
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 780.758 ; gain = 471.133
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 780.758 ; gain = 471.133
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 780.758 ; gain = 471.133
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 782.367 ; gain = 472.742
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 782.367 ; gain = 472.742
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 782.367 ; gain = 472.742
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 782.367 ; gain = 472.742
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 782.367 ; gain = 472.742
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 782.367 ; gain = 472.742
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 782.367 ; gain = 472.742
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     8|
+|2     |LUT1    |     8|
+|3     |LUT2    |    70|
+|4     |LUT3    |    35|
+|5     |LUT4    |    70|
+|6     |LUT5    |    75|
+|7     |LUT6    |   191|
+|8     |MUXCY_L |     9|
+|9     |MUXF7   |     2|
+|10    |SRL16E  |    18|
+|11    |XORCY   |    12|
+|12    |FDR     |    11|
+|13    |FDRE    |   308|
+|14    |FDSE    |    49|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 782.367 ; gain = 472.742
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 786.848 ; gain = 491.559

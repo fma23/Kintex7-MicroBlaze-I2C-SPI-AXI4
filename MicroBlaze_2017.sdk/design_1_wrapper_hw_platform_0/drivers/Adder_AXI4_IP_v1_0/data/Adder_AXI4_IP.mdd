@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER Adder_AXI4_IP
+	OPTION supported_peripherals = (Adder_AXI4_IP);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = Adder_AXI4_IP;
+END DRIVER

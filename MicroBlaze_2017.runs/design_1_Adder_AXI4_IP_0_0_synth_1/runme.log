@@ -1,0 +1,354 @@
+
+*** Running vivado
+    with args -log design_1_Adder_AXI4_IP_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Adder_AXI4_IP_0_0.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_Adder_AXI4_IP_0_0.tcl -notrace
+Command: synth_design -top design_1_Adder_AXI4_IP_0_0 -part xc7k325tffg676-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t-ffg676'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t-ffg676'
+INFO: [Common 17-1223] The version limit for your license is '2017.09' and will expire in -1637 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 118256 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 378.355 ; gain = 74.586
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_Adder_AXI4_IP_0_0' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ip/design_1_Adder_AXI4_IP_0_0/synth/design_1_Adder_AXI4_IP_0_0.vhd:87]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'Adder_AXI4_IP_v1_0' declared at 'c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0.vhd:5' bound to instance 'U0' of component 'Adder_AXI4_IP_v1_0' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ip/design_1_Adder_AXI4_IP_0_0/synth/design_1_Adder_AXI4_IP_0_0.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'Adder_AXI4_IP_v1_0' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0.vhd:53]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'Adder_AXI4_IP_v1_0_S00_AXI' declared at 'c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:5' bound to instance 'Adder_AXI4_IP_v1_0_S00_AXI_inst' of component 'Adder_AXI4_IP_v1_0_S00_AXI' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'Adder_AXI4_IP_v1_0_S00_AXI' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:91]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:254]
+INFO: [Synth 8-226] default block is never used [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:385]
+INFO: [Synth 8-3491] module 'IP_PL_TopLevel' declared at 'c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/TopLevel.vhd:25' bound to instance 'UserIP' of component 'IP_PL_TopLevel' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:426]
+INFO: [Synth 8-638] synthesizing module 'IP_PL_TopLevel' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/TopLevel.vhd:41]
+INFO: [Synth 8-3491] module 'AdderIP' declared at 'c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/adder.vhd:8' bound to instance 'Adder' of component 'AdderIP' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/TopLevel.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'AdderIP' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/adder.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'AdderIP' (1#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/adder.vhd:16]
+INFO: [Synth 8-3491] module 'GPIOs' declared at 'c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/Led.vhd:5' bound to instance 'GPIOsPortMap' of component 'GPIOs' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/TopLevel.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'GPIOs' [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/Led.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'GPIOs' (2#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/Led.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'IP_PL_TopLevel' (3#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/src/TopLevel.vhd:41]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:249]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:384]
+INFO: [Synth 8-256] done synthesizing module 'Adder_AXI4_IP_v1_0_S00_AXI' (4#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0_S00_AXI.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'Adder_AXI4_IP_v1_0' (5#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ipshared/1119/hdl/Adder_AXI4_IP_v1_0.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Adder_AXI4_IP_0_0' (6#1) [c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ip/design_1_Adder_AXI4_IP_0_0/synth/design_1_Adder_AXI4_IP_0_0.vhd:87]
+WARNING: [Synth 8-3331] design IP_PL_TopLevel has unconnected port ClK_100MHz_PLL
+WARNING: [Synth 8-3331] design Adder_AXI4_IP_v1_0_S00_AXI has unconnected port ClK_100MHz_PLL
+WARNING: [Synth 8-3331] design Adder_AXI4_IP_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Adder_AXI4_IP_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Adder_AXI4_IP_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Adder_AXI4_IP_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Adder_AXI4_IP_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Adder_AXI4_IP_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 419.434 ; gain = 115.664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 419.434 ; gain = 115.664
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k325tffg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 753.770 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "LED1_Sig" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               20 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module AdderIP 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module GPIOs 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Adder_AXI4_IP_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/UserIP/GPIOsPortMap/LED1_Sig" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design design_1_Adder_AXI4_IP_0_0 has unconnected port ClK_100MHz_PLL
+WARNING: [Synth 8-3331] design design_1_Adder_AXI4_IP_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_Adder_AXI4_IP_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_Adder_AXI4_IP_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_Adder_AXI4_IP_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_Adder_AXI4_IP_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_Adder_AXI4_IP_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_1_Adder_AXI4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_1_Adder_AXI4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module design_1_Adder_AXI4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_1_Adder_AXI4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_1_Adder_AXI4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_1_Adder_AXI4_IP_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Adder_AXI4_IP_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_1_Adder_AXI4_IP_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    13|
+|2     |LUT1   |    21|
+|3     |LUT2   |    34|
+|4     |LUT3   |     3|
+|5     |LUT4   |    21|
+|6     |LUT5   |     2|
+|7     |LUT6   |    55|
+|8     |FDCE   |    22|
+|9     |FDRE   |   135|
+|10    |FDSE   |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------+---------------------------+------+
+|      |Instance                            |Module                     |Cells |
++------+------------------------------------+---------------------------+------+
+|1     |top                                 |                           |   308|
+|2     |  U0                                |Adder_AXI4_IP_v1_0         |   308|
+|3     |    Adder_AXI4_IP_v1_0_S00_AXI_inst |Adder_AXI4_IP_v1_0_S00_AXI |   308|
+|4     |      UserIP                        |IP_PL_TopLevel             |   107|
+|5     |        Adder                       |AdderIP                    |    31|
+|6     |        GPIOsPortMap                |GPIOs                      |    76|
++------+------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 753.770 ; gain = 115.664
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 753.770 ; gain = 450.000
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+44 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 753.770 ; gain = 459.688
+INFO: [Common 17-1381] The checkpoint 'C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.runs/design_1_Adder_AXI4_IP_0_0_synth_1/design_1_Adder_AXI4_IP_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.srcs/sources_1/bd/design_1/ip/design_1_Adder_AXI4_IP_0_0/design_1_Adder_AXI4_IP_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.runs/design_1_Adder_AXI4_IP_0_0_synth_1/design_1_Adder_AXI4_IP_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 753.770 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 25 18:26:47 2022...

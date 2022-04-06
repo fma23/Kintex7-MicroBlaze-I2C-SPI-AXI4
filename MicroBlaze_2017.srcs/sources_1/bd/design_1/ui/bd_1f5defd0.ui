@@ -1,0 +1,77 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port FPGA_LED1 -pg 1 -y 690 -defaultsOSRD
+preplace port iic_rtl -pg 1 -y 360 -defaultsOSRD
+preplace port uart_rtl -pg 1 -y 210 -defaultsOSRD
+preplace port FPGA_LED2 -pg 1 -y 710 -defaultsOSRD
+preplace port FPGA_CLK_N -pg 1 -lvl 1:70 -defaultsOSRD -bot
+preplace port gpio_rtl -pg 1 -y 50 -defaultsOSRD
+preplace port FPGA_CLK_P -pg 1 -lvl 2:20 -defaultsOSRD -bot
+preplace port reset_n -pg 1 -y 750 -defaultsOSRD
+preplace port UARTTX -pg 1 -y 250 -defaultsOSRD
+preplace port gpio_rtl_0 -pg 1 -y 90 -defaultsOSRD
+preplace port UARTRX -pg 1 -y 230 -defaultsOSRD -right
+preplace port clk10mhz -pg 1 -y 840 -defaultsOSRD
+preplace port spi_rtl -pg 1 -y 520 -defaultsOSRD
+preplace portBus UART_EN -pg 1 -y 110 -defaultsOSRD
+preplace portBus gpio_io_o -pg 1 -y 70 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 7 -y 380 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -y 350 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 7 -y 80 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 3 -y 540 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 4 -y 920 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 4 -y 710 -defaultsOSRD
+preplace inst Adder_AXI4_IP_0 -pg 1 -lvl 7 -y 700 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 7 -y 240 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 5 -y 740 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 3 -y 820 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 810 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -y 740 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 7 -y 530 -defaultsOSRD
+preplace netloc axi_quad_spi_0_SPI_0 1 7 1 NJ
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 6 1 1790
+preplace netloc axi_iic_0_iic2intc_irpt 1 2 6 30 60 NJ 60 NJ 60 NJ 60 1760J 450 2090
+preplace netloc axi_uartlite_0_interrupt 1 2 6 50 80 NJ 80 NJ 80 NJ 80 1750J 160 2090
+preplace netloc microblaze_0_intr 1 3 1 610
+preplace netloc clk_in1_1 1 0 7 -250 600 NJ 600 NJ 600 600J 580 NJ 580 1450J 610 1810
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 N
+preplace netloc microblaze_0_intc_axi 1 3 4 630 590 NJ 590 1440J 600 1750
+preplace netloc microblaze_0_interrupt 1 4 1 N
+preplace netloc Adder_AXI4_IP_0_FPGA_LED1 1 7 1 NJ
+preplace netloc microblaze_0_ilmb_1 1 5 1 N
+preplace netloc Adder_AXI4_IP_0_FPGA_LED2 1 7 1 NJ
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 6 1 1770
+preplace netloc microblaze_0_axi_dp 1 5 1 1410
+preplace netloc axi_uartlite_0_tx 1 7 1 NJ
+preplace netloc axi_gpio_0_gpio_io_o 1 7 1 NJ
+preplace netloc rst_clk_wiz_1_100M_interconnect_aresetn 1 3 3 590J 220 NJ 220 N
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 3 3 580J 830 NJ 830 1450
+preplace netloc axi_gpio_0_GPIO2 1 7 1 NJ
+preplace netloc microblaze_0_M_AXI_IP 1 5 1 1430
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 1770
+preplace netloc clk_wiz_1_clk_out1 1 1 6 NJ 780 30 720 600 820 910 820 1420 90 1800
+preplace netloc ext_reset_in_1 1 0 7 -240 730 N 730 40 610 NJ 610 NJ 610 1400J 620 1760
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 3 4 620 540 NJ 540 1450 100 1780
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 3 2 630 810 900J
+preplace netloc clk_wiz_1_locked 1 1 2 N 820 30
+preplace netloc axi_iic_0_IIC 1 7 1 NJ
+preplace netloc axi_uartlite_0_UART 1 7 1 NJ
+preplace netloc axi_gpio_0_GPIO 1 7 1 NJ
+preplace netloc clk_wiz_1_clk_out2 1 1 1 -40
+preplace netloc rx_1_1 1 7 1 NJ
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 6 1 1790
+preplace netloc microblaze_0_dlmb_1 1 5 1 N
+preplace netloc clk_wiz_1_clk_out3 1 1 1 -50
+preplace netloc axi_gpio_0_gpio2_io_o 1 7 1 NJ
+preplace netloc microblaze_0_debug 1 4 1 890
+preplace netloc mdm_1_debug_sys_rst 1 2 3 50 730 610J 840 880
+levelinfo -pg 1 -270 -150 -20 410 760 1160 1600 1950 2110 -top 0 -bot 1310
+",
+}
+{
+   da_axi4_cnt: "7",
+   da_board_cnt: "10",
+   da_clkrst_cnt: "11",
+   da_mb_cnt: "1",
+}

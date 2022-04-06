@@ -1,0 +1,134 @@
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "sleep.h"
+#include "xuartlite.h"
+
+#include "xiic.h"
+#include "xil_exception.h"
+#include "xintc.h"
+#include "xbasic_types.h"
+#include "spi.h"
+#include "main.h"
+
+
+
+//#include "Si5338.h"
+
+Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR; //XPAR_ADDERDEMOIP_0_S00_AXI_BASEADDR;
+
+XUartLite UartLite;
+XGpio gpio;
+static XSpi  SpiInstance;	 /* The instance of the SPI device */
+
+extern int ReadRegister(u8 RegAddress[], u8 ReadBuffer[], u8 ByteCount);
+extern s32 ReadPLLRegisters(u8 WriteBuffer[], u8 ReadBuffer[], int ByteCount);
+
+
+
+void driverInit(void)
+{
+	int status;
+	status = XGpio_Initialize(&gpio,XPAR_AXI_GPIO_0_DEVICE_ID);
+	if(status != XST_SUCCESS)
+	{
+		printf("failed to initialize GPIO \n");
+	}
+
+
+}
+
+
+void configGPIO(void)
+{
+	XGpio_SetDataDirection(&gpio,1, 0);
+}
+
+void configUART(void)
+{
+	int Status;
+
+	/*
+	 * Initialize the UartLite driver so that it is ready to use.
+	 */
+	Status = XUartLite_Initialize(&UartLite, XPAR_UARTLITE_0_DEVICE_ID);
+	if (Status != XST_SUCCESS)
+	{
+	 xil_printf("Failed to initialize UART \n");
+	}
+
+}
+
+int main()
+{
+    int status;
+
+	u32 counter = 0;
+	u8 ReadRegData[2] ={0};
+	u8 WriteRegData[2]={0};
+
+	u8 ReadValue;
+	u8 WriteValue;
+	u8 UartDataReceived;
+
+    init_platform();
+    driverInit();
+    configGPIO();
+    configUART();
+
+    xil_printf("AXI4 Adder IP Demo\n\r");
+
+    *(baseaddr_p+0) = 77;
+    *(baseaddr_p+1) = 23;
+
+    //Register 2
+    xil_printf("Sum of first and second values is: %d \n\r", *(baseaddr_p+2));
+
+    status = SpiPolledExample(&SpiInstance, SPI_DEVICE_ID, WriteBuff, ReadBuff);
+    	if (status != XST_SUCCESS) {
+    		return XST_FAILURE;
+    	}
+
+    status= XSpi_ReadReg(XPAR_SPI_0_BASEADDR, 0x60);
+    xil_printf("loop counter %d\n", status);
+
+
+    while(1)
+    {
+
+		 counter++;
+
+		 XGpio_DiscreteWrite(&gpio,2,0x00000000);  //this is to enable Uart communication: GPIO 2 is used
+
+		 XGpio_DiscreteWrite(&gpio,1,0x00000003); //GPIO1 is used for LEDs control
+		 sleep(1);
+		 XGpio_DiscreteWrite(&gpio,1,0);
+		 sleep(1);
+		 xil_printf("loop counter %d\n", counter);
+
+
+		if(XUartLite_Recv(&UartLite,&UartDataReceived,1))
+		{
+			xil_printf("keyboard key received is  %d\n", UartDataReceived);
+
+		}
+		if(UartDataReceived == 101 || UartDataReceived ==69) // if letter E or e is received: ENABLE LEDS
+		{
+ 		*(baseaddr_p+0)|= 1<<30;     //set bit 30
+
+		}
+		else if(UartDataReceived == 100 || UartDataReceived ==68) // if letter D or d is received: DISABLE LEDS
+		{
+			*(baseaddr_p+0)&= ~(1<<30); //clear bit 30
+		}
+
+    }
+
+    cleanup_platform();
+    return 0;
+}
+
+
