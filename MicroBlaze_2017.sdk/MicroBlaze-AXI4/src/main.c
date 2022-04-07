@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
@@ -12,13 +11,12 @@
 #include "xintc.h"
 #include "xbasic_types.h"
 #include "spi.h"
+#include "i2c.h"
+
 #include "main.h"
+#include "Si5338.h"
 
-
-
-//#include "Si5338.h"
-
-Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR; //XPAR_ADDERDEMOIP_0_S00_AXI_BASEADDR;
+Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
 
 XUartLite UartLite;
 XGpio gpio;
@@ -26,7 +24,6 @@ static XSpi  SpiInstance;	 /* The instance of the SPI device */
 
 extern int ReadRegister(u8 RegAddress[], u8 ReadBuffer[], u8 ByteCount);
 extern s32 ReadPLLRegisters(u8 WriteBuffer[], u8 ReadBuffer[], int ByteCount);
-
 
 
 void driverInit(void)
@@ -37,15 +34,14 @@ void driverInit(void)
 	{
 		printf("failed to initialize GPIO \n");
 	}
-
-
 }
-
 
 void configGPIO(void)
 {
 	XGpio_SetDataDirection(&gpio,1, 0);
 }
+
+
 
 void configUART(void)
 {
@@ -59,19 +55,12 @@ void configUART(void)
 	{
 	 xil_printf("Failed to initialize UART \n");
 	}
-
 }
 
 int main()
 {
     int status;
-
-	u32 counter = 0;
-	u8 ReadRegData[2] ={0};
-	u8 WriteRegData[2]={0};
-
-	u8 ReadValue;
-	u8 WriteValue;
+    u32 counter = 0;
 	u8 UartDataReceived;
 
     init_platform();
@@ -79,31 +68,42 @@ int main()
     configGPIO();
     configUART();
 
+
+    // Test AXI4 interface
     xil_printf("AXI4 Adder IP Demo\n\r");
+    *(baseaddr_p+0) = 77;      //Register 0
+    *(baseaddr_p+1) = 23;      //Register 1
 
-    *(baseaddr_p+0) = 77;
-    *(baseaddr_p+1) = 23;
+    xil_printf("Sum of first and second values is: %d \n\r", *(baseaddr_p+2));    //Register 2
 
-    //Register 2
-    xil_printf("Sum of first and second values is: %d \n\r", *(baseaddr_p+2));
-
-    status = SpiPolledExample(&SpiInstance, SPI_DEVICE_ID, WriteBuff, ReadBuff);
-    	if (status != XST_SUCCESS) {
+    //configure PLL via SPI
+    status = PLLConfig(&SpiInstance, SPI_DEVICE_ID, WriteBuff, ReadBuff);
+    if (status != XST_SUCCESS) {
     		return XST_FAILURE;
-    	}
+     }
 
+    //Read SPI status register
     status= XSpi_ReadReg(XPAR_SPI_0_BASEADDR, 0x60);
-    xil_printf("loop counter %d\n", status);
+    xil_printf("SPI Status register value is:  %d\n", status);
+
+     //Configure I2C bus
+     status = ConfigureI2C();
+     if (status != XST_SUCCESS)
+     {
+       xil_printf("failed to configure I2C Bus \n");
+     }
+
+     //configure PLL: Si5338
+    // Configure_Si5338();
 
 
     while(1)
     {
-
 		 counter++;
 
 		 XGpio_DiscreteWrite(&gpio,2,0x00000000);  //this is to enable Uart communication: GPIO 2 is used
 
-		 XGpio_DiscreteWrite(&gpio,1,0x00000003); //GPIO1 is used for LEDs control
+		 XGpio_DiscreteWrite(&gpio,1,0x00000003);  //GPIO1 is used for LEDs control
 		 sleep(1);
 		 XGpio_DiscreteWrite(&gpio,1,0);
 		 sleep(1);
@@ -125,7 +125,6 @@ int main()
 			*(baseaddr_p+0)&= ~(1<<30); //clear bit 30
 			UartDataReceived = 0;
 		}
-
     }
 
     cleanup_platform();

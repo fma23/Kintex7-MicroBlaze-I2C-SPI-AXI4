@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;MicroBlaze-AXI4/src/I2C/axiI2C.c&apos; to &apos;I2C.c&apos;" description="Rename resource &apos;axiI2C.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/I2C/axiI2C.c" name="I2C.c" stamp="1649291656996" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;MicroBlaze-AXI4/src/I2C/axiI2C.h&apos; to &apos;I2C.h&apos;" description="Rename resource &apos;axiI2C.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/I2C/axiI2C.h" name="I2C.h" stamp="1649291670700" updateReferences="true"/>
+</session>

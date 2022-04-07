@@ -1,6 +1,6 @@
-17:59:34 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
+17:37:09 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
 make: Nothing to be done for `all'.
 
-17:59:35 Build Finished (took 364ms)
+17:37:09 Build Finished (took 349ms)
 

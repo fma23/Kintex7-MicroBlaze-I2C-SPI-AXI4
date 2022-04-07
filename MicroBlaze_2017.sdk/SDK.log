@@ -1450,3 +1450,5 @@ con
 17:58:46 INFO  : 
 17:58:47 INFO  : Updating hardware inferred compiler options for MicroBlaze-AXI4.
 17:58:47 INFO  : Clearing existing target manager status.
+16:07:30 INFO  : Disconnected from the channel tcfchan#1.
+16:07:33 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
