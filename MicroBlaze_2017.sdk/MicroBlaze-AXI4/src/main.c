@@ -25,6 +25,8 @@ static XSpi  SpiInstance;	 /* The instance of the SPI device */
 extern int ReadRegister(u8 RegAddress[], u8 ReadBuffer[], u8 ByteCount);
 extern s32 ReadPLLRegisters(u8 WriteBuffer[], u8 ReadBuffer[], int ByteCount);
 
+u8 WriteByte(u8 *BufferPtr, u8 ByteCount);
+
 
 void driverInit(void)
 {
@@ -40,7 +42,6 @@ void configGPIO(void)
 {
 	XGpio_SetDataDirection(&gpio,1, 0);
 }
-
 
 
 void configUART(void)
@@ -87,14 +88,15 @@ int main()
     xil_printf("SPI Status register value is:  %d\n", status);
 
      //Configure I2C bus
-     status = ConfigureI2C();
+     //status = ConfigureI2C();
+    status= I2C_initialize();
      if (status != XST_SUCCESS)
      {
        xil_printf("failed to configure I2C Bus \n");
      }
 
      //configure PLL: Si5338
-    // Configure_Si5338();
+     Configure_Si5338();
 
 
     while(1)
@@ -130,5 +132,3 @@ int main()
     cleanup_platform();
     return 0;
 }
-
-

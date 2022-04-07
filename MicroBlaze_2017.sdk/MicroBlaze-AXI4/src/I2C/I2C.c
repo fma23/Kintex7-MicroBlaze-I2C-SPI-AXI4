@@ -1,6 +1,5 @@
 #include <I2C.h>
 #include <stdio.h>
-//#include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
 #include "xgpio.h"
@@ -11,6 +10,8 @@
 #include "xil_exception.h"
 #include "xintc.h"
 #include "xiic.h"
+#include "Si5338.h"
+
 
 
 XIntc InterruptController;
@@ -18,7 +19,7 @@ XIntc InterruptController;
 volatile u8 TransmitComplete;
 volatile u8 ReceiveComplete;
 
-#define SLAVE_ADDRESS	0x70	/* 0xE0 as an 8 bit number. */
+//#define SLAVE_ADDRESS	0x70	/* 0xE0 as an 8 bit number. */
 
 static void SendHandler(XIic *InstancePtr);
 static void ReceiveHandler(XIic *InstancePtr);
@@ -27,10 +28,32 @@ static int SetupInterruptSystem(XIic *IicInstPtr);
 
 
 
-#define INTC_DEVICE_ID	XPAR_INTC_0_DEVICE_ID
-#define IIC_INTR_ID	XPAR_INTC_0_IIC_0_VEC_ID
-#define INTC			XIntc
-#define INTC_HANDLER	XIic_InterruptHandler
+
+int I2C_initialize(void)
+{
+	u32 StatusReg;
+	int Status;
+
+	 /*
+	 * Initialize the IIC Core.
+	 */
+	Status = XIic_DynInit(XPAR_AXI_IIC_0_BASEADDR);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Make sure all the Fifo's are cleared and Bus is Not busy.
+	 */
+	while (((StatusReg = XIic_ReadReg(XPAR_AXI_IIC_0_BASEADDR,
+				XIIC_SR_REG_OFFSET)) &
+				(XIIC_SR_RX_FIFO_EMPTY_MASK |
+				XIIC_SR_TX_FIFO_EMPTY_MASK |
+				XIIC_SR_BUS_BUSY_MASK)) !=
+				(XIIC_SR_RX_FIFO_EMPTY_MASK |
+				XIIC_SR_TX_FIFO_EMPTY_MASK)) { }
+	return Status;
+}
 
 
 int WriteRegister(u8 *RegNum, u8 *WriteValue,u16 ByteCount)

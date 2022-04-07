@@ -19764,3 +19764,369 @@ org.eclipse.cdt.debug.mi.core.cdi.MI2CDIException: Inferior terminated[]
 
 !ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 17:33:34.774
 !MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-621
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:32.022
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:32.057
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:32.058
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:32.063
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:32.064
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:32.067
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2022-04-06 18:23:36.034
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.035
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.056
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.057
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.077
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.078
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.097
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.098
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.132
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.133
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0} -index 0], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.188
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0} -index 0], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.191
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.225
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.226
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.228
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.229
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.241
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.242
+!MESSAGE XSCT Command: [version -server], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.244
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.1]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.245
+!MESSAGE XSCT Command: [version], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.247
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.1]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.248
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.259
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.260
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.294
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.295
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.307
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.308
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.340
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.341
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.352
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.353
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.384
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.385
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.395
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.397
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.425
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.426
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.456
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.457
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.461
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 6000000]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.463
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.516
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.518
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.568
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.569
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.664
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:36.665
+!MESSAGE XSCT Command: [dow C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4/Debug/MicroBlaze-AXI4.elf], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:37.758
+!MESSAGE XSCT command with result: [dow C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4/Debug/MicroBlaze-AXI4.elf], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:37.812
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:37.887
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:37.888
+!MESSAGE XSCT Command: [con], Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:23:37.892
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-68
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:51.614
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:51.622
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:51.623
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:51.627
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:51.628
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:51.631
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:58.079
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-1170
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:58.083
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-1170
+
+!ENTRY com.xilinx.sdk.utils 1 0 2022-04-06 18:26:59.083
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.084
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.089
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.090
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.102
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.103
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.109
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.110
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.127
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.128
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0} -index 0], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.157
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0} -index 0], Result: [null, ]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.158
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.180
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.181
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.182
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.183
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.189
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.190
+!MESSAGE XSCT Command: [version -server], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.192
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.1]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.192
+!MESSAGE XSCT Command: [version], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.194
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.1]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.195
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.201
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.202
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.227
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.228
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.235
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.236
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.252
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.253
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.260
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.261
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.281
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.282
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.289
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.290
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.307
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.308
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.325
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Result: [null, ]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.326
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.328
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 6000000]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.328
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.359
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Result: [null, ]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.360
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.399
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.400
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.433
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Result: [null, ]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:26:59.434
+!MESSAGE XSCT Command: [dow C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4/Debug/MicroBlaze-AXI4.elf], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:27:00.433
+!MESSAGE XSCT command with result: [dow C:/Users/fmabrouk/Documents/FPGA/MicroBlaze_2017/MicroBlaze_2017.sdk/MicroBlaze-AXI4/Debug/MicroBlaze-AXI4.elf], Result: [null, ]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:27:00.471
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:27:00.523
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 00000000000000"} -index 0], Result: [null, ]. Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:27:00.524
+!MESSAGE XSCT Command: [con], Thread: Worker-69
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-06 18:27:00.532
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-69

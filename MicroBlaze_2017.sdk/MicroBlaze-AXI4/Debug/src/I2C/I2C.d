@@ -18,7 +18,8 @@ src/I2C/I2C.o src/I2C/I2C.o: ../src/I2C/I2C.c \
  ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic_l.h \
  ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_exception.h \
  ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xintc.h \
- ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xintc_l.h
+ ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xintc_l.h \
+ ../src/I2C/Si5338.h
 
 C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C/I2C.h:
 
@@ -59,3 +60,5 @@ C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xintc.h:
 
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xintc_l.h:
+
+../src/I2C/Si5338.h:

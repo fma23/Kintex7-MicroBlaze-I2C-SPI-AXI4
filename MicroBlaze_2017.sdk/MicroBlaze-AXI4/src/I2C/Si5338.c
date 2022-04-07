@@ -11,14 +11,16 @@ static void WritePLL_Configuration(const Reg_Data RegData[]);
 u8 Read_Si5338(u8 Reg_Addr)
 {
 	int status;
+	unsigned char SentByteCount;
 
 	u8 WriteBuffer[2]={0};
 	u8 ReadBuffer[2]={0};
 
 	WriteBuffer[0]=Reg_Addr;
-	status=WriteData(WriteBuffer, 1);
+	//status=WriteData(WriteBuffer, 1);
+	SentByteCount = XIic_DynSend(XPAR_AXI_IIC_0_BASEADDR, SLAVE_ADDRESS, WriteBuffer, 1, XIIC_STOP);
 
-	status = ReadData(ReadBuffer, 1);
+	//status = ReadData(ReadBuffer, 1);
 
 	return ReadBuffer[0];
 }
@@ -27,13 +29,16 @@ u8 Read_Si5338(u8 Reg_Addr)
 int Write_Si5338(u8 Reg_Addr,u8 Data)
 {
 	int status;
+	unsigned char SentByteCount;
+
 
 	u8 WriteBuffer[2]={0};
 
 	WriteBuffer[0]=Reg_Addr;
 	WriteBuffer[1]=Data;
 
-	status=WriteData(WriteBuffer, 2);
+	SentByteCount = XIic_DynSend(XPAR_AXI_IIC_0_BASEADDR, SLAVE_ADDRESS, WriteBuffer, 2, XIIC_STOP);
+	//status=WriteData(WriteBuffer, 2);
 	if (status != XST_SUCCESS)
 	{
 	   xil_printf("failed to read register %d \n", Reg_Addr);

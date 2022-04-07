@@ -1,0 +1,213 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "sleep.h"
+#include "xuartlite.h"
+
+#include "xiic.h"
+#include "xil_exception.h"
+#include "xintc.h"
+#include "xbasic_types.h"
+#include "spi.h"
+#include "i2c.h"
+
+#include "main.h"
+#include "Si5338.h"
+
+Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+
+XUartLite UartLite;
+XGpio gpio;
+static XSpi  SpiInstance;	 /* The instance of the SPI device */
+
+extern int ReadRegister(u8 RegAddress[], u8 ReadBuffer[], u8 ByteCount);
+extern s32 ReadPLLRegisters(u8 WriteBuffer[], u8 ReadBuffer[], int ByteCount);
+
+
+void driverInit(void)
+{
+	int status;
+	status = XGpio_Initialize(&gpio,XPAR_AXI_GPIO_0_DEVICE_ID);
+	if(status != XST_SUCCESS)
+	{
+		printf("failed to initialize GPIO \n");
+	}
+}
+
+void configGPIO(void)
+{
+	XGpio_SetDataDirection(&gpio,1, 0);
+}
+
+
+void configUART(void)
+{
+	int Status;
+
+	/*
+	 * Initialize the UartLite driver so that it is ready to use.
+	 */
+	Status = XUartLite_Initialize(&UartLite, XPAR_UARTLITE_0_DEVICE_ID);
+	if (Status != XST_SUCCESS)
+	{
+	 xil_printf("Failed to initialize UART \n");
+	}
+}
+
+int main()
+{
+    int status;
+    u32 counter = 0;
+	u8 UartDataReceived;
+
+    init_platform();
+    driverInit();
+    configGPIO();
+    configUART();
+
+
+    // Test AXI4 interface
+    xil_printf("AXI4 Adder IP Demo\n\r");
+    *(baseaddr_p+0) = 77;      //Register 0
+    *(baseaddr_p+1) = 23;      //Register 1
+
+    xil_printf("Sum of first and second values is: %d \n\r", *(baseaddr_p+2));    //Register 2
+
+    //configure PLL via SPI
+    status = PLLConfig(&SpiInstance, SPI_DEVICE_ID, WriteBuff, ReadBuff);
+    if (status != XST_SUCCESS) {
+    		return XST_FAILURE;
+     }
+
+    //Read SPI status register
+    status= XSpi_ReadReg(XPAR_SPI_0_BASEADDR, 0x60);
+    xil_printf("SPI Status register value is:  %d\n", status);
+
+     //Configure I2C bus
+     status = ConfigureI2C();
+     if (status != XST_SUCCESS)
+     {
+       xil_printf("failed to configure I2C Bus \n");
+     }
+
+     //configure PLL: Si5338
+    // Configure_Si5338();
+
+
+    while(1)
+    {
+		 counter++;
+
+		 XGpio_DiscreteWrite(&gpio,2,0x00000000);  //this is to enable Uart communication: GPIO 2 is used
+
+		 XGpio_DiscreteWrite(&gpio,1,0x00000003);  //GPIO1 is used for LEDs control
+		 sleep(1);
+		 XGpio_DiscreteWrite(&gpio,1,0);
+		 sleep(1);
+		 xil_printf("loop counter %d\n", counter);
+
+
+		if(XUartLite_Recv(&UartLite,&UartDataReceived,1))
+		{
+			xil_printf("keyboard key received is  %d\n", UartDataReceived);
+
+		}
+		if(UartDataReceived == 101 || UartDataReceived ==69) // if letter E or e is received: ENABLE LEDS
+		{
+ 		  *(baseaddr_p+0)|= 1<<30;     //set bit 30
+ 		  UartDataReceived = 0;
+		}
+		else if(UartDataReceived == 100 || UartDataReceived ==68) // if letter D or d is received: DISABLE LEDS
+		{
+			*(baseaddr_p+0)&= ~(1<<30); //clear bit 30
+			UartDataReceived = 0;
+		}
+    }
+
+    cleanup_platform();
+    return 0;
+}
+
+
+int IicLowLevelDynEeprom()
+{
+	u8 BytesRead;
+	u8 BytesWritten;
+	u32 StatusReg;
+	u8 Index;
+	int Status;
+	//EepromIicAddr = EEPROM_ADDRESS;
+
+	/*
+	 * Initialize the IIC Core.
+	 */
+	Status = XIic_DynInit(XPAR_AXI_IIC_0_BASEADDR);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Make sure all the Fifo's are cleared and Bus is Not busy.
+	 */
+	while (((StatusReg = XIic_ReadReg(XPAR_AXI_IIC_0_BASEADDR,
+				XIIC_SR_REG_OFFSET)) &
+				(XIIC_SR_RX_FIFO_EMPTY_MASK |
+				XIIC_SR_TX_FIFO_EMPTY_MASK |
+				XIIC_SR_BUS_BUSY_MASK)) !=
+				(XIIC_SR_RX_FIFO_EMPTY_MASK |
+				XIIC_SR_TX_FIFO_EMPTY_MASK)) {
+
+	}
+
+	    /*
+		 * Write to the slave
+		 */
+		BytesWritten = WriteByte(WriteBuffer, 20);
+		if (BytesWritten != 20) {
+			return XST_FAILURE;
+		}
+
+
+}
+
+u8 WriteByte(u8 *BufferPtr, u8 ByteCount)
+{
+	u8 SentByteCount;
+	AddressType Address = EEPROM_TEST_START_ADDRESS;
+	u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
+	u8 Index;
+
+	/*
+	 * A temporary write buffer must be used which contains both the address
+	 * and the data to be written, put the address in first based upon the
+	 * size of the address for the EEPROM
+	 */
+	if (sizeof(AddressType) == 2) {
+		WriteBuffer[0] = (u8) (Address >> 8);
+		WriteBuffer[1] = (u8) (Address);
+	} else if (sizeof(AddressType) == 1) {
+		WriteBuffer[0] = (u8) (Address);
+		EepromIicAddr |= (EEPROM_TEST_START_ADDRESS >> 8) & 0x7;
+	}
+
+	/*
+	 * Put the data in the write buffer following the address.
+	 */
+	for (Index = 0; Index < ByteCount; Index++) {
+		WriteBuffer[sizeof(Address) + Index] = BufferPtr[Index];
+	}
+
+	/*
+	 * Write a page of data at the specified address to the EEPROM.
+	 */
+	SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
+				WriteBuffer, sizeof(Address) + PAGE_SIZE,
+				XIIC_STOP);
+
+	/*
+	 * Return the number of bytes written to the EEPROM.
+	 */
+	return SentByteCount - sizeof(Address);
+}
