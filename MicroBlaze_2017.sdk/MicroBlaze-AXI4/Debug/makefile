@@ -8,8 +8,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/UART/subdir.mk
 -include src/SPI/subdir.mk
 -include src/I2C/subdir.mk
+-include src/GPIOs/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk
@@ -27,6 +29,7 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 ELFSIZE += \
+MicroBlaze-AXI4.elf.size \
 MicroBlaze-AXI4.elf.size \
 
 

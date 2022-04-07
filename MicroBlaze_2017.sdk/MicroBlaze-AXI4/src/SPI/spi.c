@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "xil_printf.h"
-#include "xparameters.h"	/* XPAR parameters */
+#include "xparameters.h"
 #include "xspi.h"
 #include "sleep.h"
 #include "spi.h"

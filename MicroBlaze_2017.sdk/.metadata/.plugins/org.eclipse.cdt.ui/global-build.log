@@ -1,223 +1,23 @@
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:167:18: warning: implicit declaration of function 'WriteByte' [-Wimplicit-function-declaration]
-   BytesWritten = WriteByte(WriteBuffer, 20);
-                  ^~~~~~~~~
-../src/main.c:167:28: error: 'WriteBuffer' undeclared (first use in this function)
-   BytesWritten = WriteByte(WriteBuffer, 20);
-                            ^~~~~~~~~~~
-../src/main.c:167:28: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:139:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:136:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: At top level:
-../src/main.c:175:4: error: conflicting types for 'WriteByte'
- u8 WriteByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~
-../src/main.c:167:18: note: previous implicit declaration of 'WriteByte' was here
-   BytesWritten = WriteByte(WriteBuffer, 20);
-                  ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:178:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:178:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:179:35: error: 'PAGE_SIZE' undeclared (first use in this function)
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-                                   ^~~~~~~~~
-../src/main.c:187:13: error: 'AddressType' undeclared (first use in this function)
-  if (sizeof(AddressType) == 2) {
-             ^~~~~~~~~~~
-../src/main.c:192:3: error: 'EepromIicAddr' undeclared (first use in this function)
-   EepromIicAddr |= (EEPROM_TEST_START_ADDRESS >> 8) & 0x7;
-   ^~~~~~~~~~~~~
-../src/main.c:205:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:179:5: warning: unused variable 'WriteBuffer' [-Wunused-variable]
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-     ^~~~~~~~~~~
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-17:53:04 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
+15:19:16 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
-'Building file: ../src/main.c'
+'Building file: ../src/UART/uart.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:167:18: warning: implicit declaration of function 'WriteByte' [-Wimplicit-function-declaration]
-   BytesWritten = WriteByte(WriteBuffer, 20);
-                  ^~~~~~~~~
-../src/main.c:167:28: error: 'WriteBuffer' undeclared (first use in this function)
-   BytesWritten = WriteByte(WriteBuffer, 20);
-                            ^~~~~~~~~~~
-../src/main.c:167:28: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:139:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:136:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: At top level:
-../src/main.c:175:4: error: conflicting types for 'WriteByte'
- u8 WriteByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~
-../src/main.c:167:18: note: previous implicit declaration of 'WriteByte' was here
-   BytesWritten = WriteByte(WriteBuffer, 20);
-                  ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:178:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:178:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:179:35: error: 'PAGE_SIZE' undeclared (first use in this function)
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-                                   ^~~~~~~~~
-../src/main.c:187:13: error: 'AddressType' undeclared (first use in this function)
-  if (sizeof(AddressType) == 2) {
-             ^~~~~~~~~~~
-../src/main.c:192:3: error: 'EepromIicAddr' undeclared (first use in this function)
-   EepromIicAddr |= (EEPROM_TEST_START_ADDRESS >> 8) & 0x7;
-   ^~~~~~~~~~~~~
-../src/main.c:205:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:179:5: warning: unused variable 'WriteBuffer' [-Wunused-variable]
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-     ^~~~~~~~~~~
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-17:53:36 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/UART/uart.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/UART/uart.d" -MT"src/UART/uart.o" -o "src/UART/uart.o" "../src/UART/uart.c"
+../src/UART/uart.c: In function 'configUART':
+../src/UART/uart.c:23:2: error: expected declaration or statement at end of input
+  }
+  ^
+make: *** [src/UART/uart.o] Error 1
+15:19:28 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
-'Building file: ../src/main.c'
+'Building file: ../src/UART/uart.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:169:28: error: 'WriteBuffer' undeclared (first use in this function)
-   BytesWritten = WriteByte(WriteBuffer, 20);
-                            ^~~~~~~~~~~
-../src/main.c:169:28: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:141:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:138:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:180:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:180:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:181:35: error: 'PAGE_SIZE' undeclared (first use in this function)
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-                                   ^~~~~~~~~
-../src/main.c:189:13: error: 'AddressType' undeclared (first use in this function)
-  if (sizeof(AddressType) == 2) {
-             ^~~~~~~~~~~
-../src/main.c:194:3: error: 'EepromIicAddr' undeclared (first use in this function)
-   EepromIicAddr |= (EEPROM_TEST_START_ADDRESS >> 8) & 0x7;
-   ^~~~~~~~~~~~~
-../src/main.c:207:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:181:5: warning: unused variable 'WriteBuffer' [-Wunused-variable]
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-     ^~~~~~~~~~~
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:175:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-17:54:48 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:107:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:456:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:540:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-'Finished building: ../src/I2C/I2C.c'
-' '
-'Building file: ../src/I2C/Si5338.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/Si5338.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/Si5338.d" -MT"src/I2C/Si5338.o" -o "src/I2C/Si5338.o" "../src/I2C/Si5338.c"
-../src/I2C/Si5338.c: In function 'Read_Si5338':
-../src/I2C/Si5338.c:13:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  int status;
-      ^~~~~~
-'Finished building: ../src/I2C/Si5338.c'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/UART/uart.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/UART/uart.d" -MT"src/UART/uart.o" -o "src/UART/uart.o" "../src/UART/uart.c"
+'Finished building: ../src/UART/uart.c'
 ' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 In file included from ../src/main.c:12:0:
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
  #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
@@ -230,248 +30,66 @@ In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
  #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
                                                ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+../src/main.c:21:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
  Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
                        ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:141:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:138:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:180:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:180:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:180:24: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:181:35: error: 'PAGE_SIZE' undeclared (first use in this function)
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-                                   ^~~~~~~~~
-../src/main.c:189:13: error: 'AddressType' undeclared (first use in this function)
-  if (sizeof(AddressType) == 2) {
-             ^~~~~~~~~~~
-../src/main.c:194:3: error: 'EepromIicAddr' undeclared (first use in this function)
-   EepromIicAddr |= (EEPROM_TEST_START_ADDRESS >> 8) & 0x7;
-   ^~~~~~~~~~~~~
-../src/main.c:207:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:181:5: warning: unused variable 'WriteBuffer' [-Wunused-variable]
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-     ^~~~~~~~~~~
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:175:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-17:55:19 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:141:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:138:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:180:2: error: unknown type name 'AddressType'
-  AddressType Address = 10;
-  ^~~~~~~~~~~
-../src/main.c:181:35: error: 'PAGE_SIZE' undeclared (first use in this function)
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-                                   ^~~~~~~~~
-../src/main.c:181:35: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:189:13: error: 'AddressType' undeclared (first use in this function)
-  if (sizeof(AddressType) == 2) {
-             ^~~~~~~~~~~
-../src/main.c:194:3: error: 'EepromIicAddr' undeclared (first use in this function)
-   EepromIicAddr |= (EEPROM_TEST_START_ADDRESS >> 8) & 0x7;
-   ^~~~~~~~~~~~~
-../src/main.c:194:21: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-   EepromIicAddr |= (EEPROM_TEST_START_ADDRESS >> 8) & 0x7;
-                     ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:207:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:181:5: warning: unused variable 'WriteBuffer' [-Wunused-variable]
-  u8 WriteBuffer[sizeof(Address) + PAGE_SIZE];
-     ^~~~~~~~~~~
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:175:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-17:57:19 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:141:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:138:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:207:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:207:31: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:207:49: error: 'EepromIicAddr' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                                                 ^~~~~~~~~~~~~
-../src/main.c:208:25: error: 'Address' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                         ^~~~~~~
-../src/main.c:208:36: error: 'PAGE_SIZE' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                                    ^~~~~~~~~
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:175:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/main.c: In function 'WriteByte':
-../src/main.c:215:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-17:58:33 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:141:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:138:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:183:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:183:31: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:183:49: error: 'EepromIicAddr' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                                                 ^~~~~~~~~~~~~
-../src/main.c:184:25: error: 'Address' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                         ^~~~~~~
-../src/main.c:184:36: error: 'PAGE_SIZE' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                                    ^~~~~~~~~
-../src/main.c: In function 'EepromReadByte':
-../src/main.c:198:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:198:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic.h:325:0,
-                 from ../src/main.c:9:
-../src/main.c:204:28: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-   StatusReg = XIic_ReadReg(IIC_BASE_ADDRESS, XIIC_SR_REG_OFFSET);
-                            ^
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic_l.h:280:13: note: in definition of macro 'XIic_ReadReg'
-  XIic_In32((BaseAddress) + (RegOffset))
-             ^~~~~~~~~~~
-../src/main.c:207:8: error: 'EepromIicAddr' undeclared (first use in this function)
-        EepromIicAddr,
-        ^~~~~~~~~~~~~
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:175:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/main.c: In function 'WriteByte':
-../src/main.c:191:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/main.o] Error 1
-18:00:35 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:107:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:456:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:540:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-'Finished building: ../src/I2C/I2C.c'
+'Finished building: ../src/main.c'
 ' '
-'Building file: ../src/I2C/Si5338.c'
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '
+15:19:58 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+make all 
+'Building file: ../src/GPIOs/gpio.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/Si5338.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/Si5338.d" -MT"src/I2C/Si5338.o" -o "src/I2C/Si5338.o" "../src/I2C/Si5338.c"
-../src/I2C/Si5338.c: In function 'Read_Si5338':
-../src/I2C/Si5338.c:13:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  int status;
-      ^~~~~~
-'Finished building: ../src/I2C/Si5338.c'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/GPIOs/gpio.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/GPIOs/gpio.d" -MT"src/GPIOs/gpio.o" -o "src/GPIOs/gpio.o" "../src/GPIOs/gpio.c"
+In file included from ../src/GPIOs/gpio.c:6:0:
+../src/GPIOs/gpio.h:5:1: error: unknown type name 'Xuint32'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+ ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/GPIOs/gpio.c:2:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/GPIOs/gpio.h:5:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+make: *** [src/GPIOs/gpio.o] Error 1
+15:20:32 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+make all 
+'Building file: ../src/GPIOs/gpio.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/GPIOs/gpio.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/GPIOs/gpio.d" -MT"src/GPIOs/gpio.o" -o "src/GPIOs/gpio.o" "../src/GPIOs/gpio.c"
+In file included from ../src/GPIOs/gpio.h:4:0,
+                 from ../src/GPIOs/gpio.c:6:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/GPIOs/gpio.c:2:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/GPIOs/gpio.h:7:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/GPIOs/gpio.c'
 ' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 In file included from ../src/main.c:12:0:
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
  #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
@@ -484,705 +102,194 @@ In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
  #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
                                                ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs/gpio.h:7:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
  Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
                        ^
-../src/main.c: In function 'I2C_initialize':
-../src/main.c:150:11: error: 'StatusReg' undeclared (first use in this function)
-  while (((StatusReg = XIic_ReadReg(XPAR_AXI_IIC_0_BASEADDR,
-           ^~~~~~~~~
-../src/main.c:150:11: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:167:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:164:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:209:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:209:49: error: 'EepromIicAddr' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                                                 ^~~~~~~~~~~~~
-../src/main.c:210:25: error: 'Address' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                         ^~~~~~~
-../src/main.c:210:36: error: 'PAGE_SIZE' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                                    ^~~~~~~~~
-../src/main.c: In function 'EepromReadByte':
-../src/main.c:224:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:224:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic.h:325:0,
-                 from ../src/main.c:9:
-../src/main.c:230:28: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-   StatusReg = XIic_ReadReg(IIC_BASE_ADDRESS, XIIC_SR_REG_OFFSET);
-                            ^
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic_l.h:280:13: note: in definition of macro 'XIic_ReadReg'
-  XIic_In32((BaseAddress) + (RegOffset))
-             ^~~~~~~~~~~
-../src/main.c:233:8: error: 'EepromIicAddr' undeclared (first use in this function)
-        EepromIicAddr,
-        ^~~~~~~~~~~~~
-../src/main.c: In function 'I2C_initialize':
-../src/main.c:260:1: error: expected declaration or statement at end of input
- }
- ^
-../src/main.c:260:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-At top level:
-../src/main.c:219:4: warning: 'EepromReadByte' defined but not used [-Wunused-function]
- u8 EepromReadByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~~~~~~
-../src/main.c:203:4: warning: 'WriteByte' defined but not used [-Wunused-function]
- u8 WriteByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~
-../src/main.c:162:5: warning: 'IicLowLevelDynEeprom' defined but not used [-Wunused-function]
- int IicLowLevelDynEeprom()
-     ^~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-18:00:58 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'I2C_initialize':
-../src/main.c:150:11: error: 'StatusReg' undeclared (first use in this function)
-  while (((StatusReg = XIic_ReadReg(XPAR_AXI_IIC_0_BASEADDR,
-           ^~~~~~~~~
-../src/main.c:150:11: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:167:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:164:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:209:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:209:49: error: 'EepromIicAddr' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                                                 ^~~~~~~~~~~~~
-../src/main.c:210:25: error: 'Address' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                         ^~~~~~~
-../src/main.c:210:36: error: 'PAGE_SIZE' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                                    ^~~~~~~~~
-../src/main.c: In function 'EepromReadByte':
-../src/main.c:224:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:224:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic.h:325:0,
-                 from ../src/main.c:9:
-../src/main.c:230:28: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-   StatusReg = XIic_ReadReg(IIC_BASE_ADDRESS, XIIC_SR_REG_OFFSET);
-                            ^
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic_l.h:280:13: note: in definition of macro 'XIic_ReadReg'
-  XIic_In32((BaseAddress) + (RegOffset))
-             ^~~~~~~~~~~
-../src/main.c:233:8: error: 'EepromIicAddr' undeclared (first use in this function)
-        EepromIicAddr,
-        ^~~~~~~~~~~~~
-../src/main.c: In function 'I2C_initialize':
-../src/main.c:260:1: error: expected declaration or statement at end of input
- }
- ^
-../src/main.c:260:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-At top level:
-../src/main.c:219:4: warning: 'EepromReadByte' defined but not used [-Wunused-function]
- u8 EepromReadByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~~~~~~
-../src/main.c:203:4: warning: 'WriteByte' defined but not used [-Wunused-function]
- u8 WriteByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~
-../src/main.c:162:5: warning: 'IicLowLevelDynEeprom' defined but not used [-Wunused-function]
- int IicLowLevelDynEeprom()
-     ^~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-18:01:36 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'I2C_initialize':
-../src/main.c:143:2: error: 'Status' undeclared (first use in this function)
-  Status = XIic_DynInit(XPAR_AXI_IIC_0_BASEADDR);
-  ^~~~~~
-../src/main.c:143:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:168:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:165:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:210:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:210:49: error: 'EepromIicAddr' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                                                 ^~~~~~~~~~~~~
-../src/main.c:211:25: error: 'Address' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                         ^~~~~~~
-../src/main.c:211:36: error: 'PAGE_SIZE' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                                    ^~~~~~~~~
-../src/main.c: In function 'EepromReadByte':
-../src/main.c:225:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:225:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic.h:325:0,
-                 from ../src/main.c:9:
-../src/main.c:231:28: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-   StatusReg = XIic_ReadReg(IIC_BASE_ADDRESS, XIIC_SR_REG_OFFSET);
-                            ^
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic_l.h:280:13: note: in definition of macro 'XIic_ReadReg'
-  XIic_In32((BaseAddress) + (RegOffset))
-             ^~~~~~~~~~~
-../src/main.c:234:8: error: 'EepromIicAddr' undeclared (first use in this function)
-        EepromIicAddr,
-        ^~~~~~~~~~~~~
-../src/main.c: In function 'I2C_initialize':
-../src/main.c:261:1: error: expected declaration or statement at end of input
- }
- ^
-../src/main.c:261:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-At top level:
-../src/main.c:220:4: warning: 'EepromReadByte' defined but not used [-Wunused-function]
- u8 EepromReadByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~~~~~~
-../src/main.c:204:4: warning: 'WriteByte' defined but not used [-Wunused-function]
- u8 WriteByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~
-../src/main.c:163:5: warning: 'IicLowLevelDynEeprom' defined but not used [-Wunused-function]
- int IicLowLevelDynEeprom()
-     ^~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-18:01:54 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-../src/main.c: In function 'IicLowLevelDynEeprom':
-../src/main.c:169:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
-../src/main.c:166:5: warning: unused variable 'BytesRead' [-Wunused-variable]
-  u8 BytesRead;
-     ^~~~~~~~~
-../src/main.c: In function 'WriteByte':
-../src/main.c:211:31: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                               ^~~~~~~~~~~~~~~~
-../src/main.c:211:31: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:211:49: error: 'EepromIicAddr' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(IIC_BASE_ADDRESS, EepromIicAddr,
-                                                 ^~~~~~~~~~~~~
-../src/main.c:212:25: error: 'Address' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                         ^~~~~~~
-../src/main.c:212:36: error: 'PAGE_SIZE' undeclared (first use in this function)
-     WriteBuffer, sizeof(Address) + PAGE_SIZE,
-                                    ^~~~~~~~~
-../src/main.c: In function 'EepromReadByte':
-../src/main.c:226:2: error: unknown type name 'AddressType'
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-  ^~~~~~~~~~~
-../src/main.c:226:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
-  AddressType Address = EEPROM_TEST_START_ADDRESS;
-                        ^~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic.h:325:0,
-                 from ../src/main.c:9:
-../src/main.c:232:28: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
-   StatusReg = XIic_ReadReg(IIC_BASE_ADDRESS, XIIC_SR_REG_OFFSET);
-                            ^
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic_l.h:280:13: note: in definition of macro 'XIic_ReadReg'
-  XIic_In32((BaseAddress) + (RegOffset))
-             ^~~~~~~~~~~
-../src/main.c:235:8: error: 'EepromIicAddr' undeclared (first use in this function)
-        EepromIicAddr,
-        ^~~~~~~~~~~~~
-../src/main.c: In function 'I2C_initialize':
-../src/main.c:262:1: error: expected declaration or statement at end of input
- }
- ^
-../src/main.c:262:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-At top level:
-../src/main.c:221:4: warning: 'EepromReadByte' defined but not used [-Wunused-function]
- u8 EepromReadByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~~~~~~
-../src/main.c:205:4: warning: 'WriteByte' defined but not used [-Wunused-function]
- u8 WriteByte(u8 *BufferPtr, u8 ByteCount)
-    ^~~~~~~~~
-../src/main.c:164:5: warning: 'IicLowLevelDynEeprom' defined but not used [-Wunused-function]
- int IicLowLevelDynEeprom()
-     ^~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-18:12:18 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:137:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:304:12: error: invalid storage class for function 'SetupInterruptSystem'
- static int SetupInterruptSystem(XIic *IicInstPtr)
-            ^~~~~~~~~~~~~~~~~~~~
-../src/I2C/I2C.c:379:13: error: invalid storage class for function 'SendHandler'
- static void SendHandler(XIic *InstancePtr)
-             ^~~~~~~~~~~
-../src/I2C/I2C.c:397:13: error: invalid storage class for function 'ReceiveHandler'
- static void ReceiveHandler(XIic *InstancePtr)
-             ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:416:13: error: invalid storage class for function 'StatusHandler'
- static void StatusHandler(XIic *InstancePtr, int Event)
-             ^~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'ConfigureI2C':
-../src/I2C/I2C.c:463:6: error: 'SLAVE_ADDRESS' undeclared (first use in this function)
-      SLAVE_ADDRESS);
-      ^~~~~~~~~~~~~
-../src/I2C/I2C.c:463:6: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:486:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:570:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:637:1: error: expected declaration or statement at end of input
- }
- ^
-../src/I2C/I2C.c: At top level:
-../src/I2C/I2C.c:23:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
- static void SendHandler(XIic *InstancePtr);
-             ^~~~~~~~~~~
-../src/I2C/I2C.c:24:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
- static void ReceiveHandler(XIic *InstancePtr);
-             ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:25:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
- static void StatusHandler(XIic *InstancePtr, int Event);
-             ^~~~~~~~~~~~~
-../src/I2C/I2C.c:26:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
- static int SetupInterruptSystem(XIic *IicInstPtr);
-            ^~~~~~~~~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:637:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-At top level:
-../src/I2C/I2C.c:567:5: warning: 'WriteData' defined but not used [-Wunused-function]
- int WriteData(u8 WriteBuffer[], u16 ByteCount)
-     ^~~~~~~~~
-../src/I2C/I2C.c:483:5: warning: 'ReadData' defined but not used [-Wunused-function]
- int ReadData(u8 *BufferPtr, u16 ByteCount)
-     ^~~~~~~~
-../src/I2C/I2C.c:422:5: warning: 'ConfigureI2C' defined but not used [-Wunused-function]
- int ConfigureI2C(void)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:213:5: warning: 'WriteI2CData' defined but not used [-Wunused-function]
- int WriteI2CData(u8 RegAdd[],u16 ByteCount)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:134:5: warning: 'ReadI2CData' defined but not used [-Wunused-function]
- int ReadI2CData(u8 BufferPtr[], u16 ByteCount)
-     ^~~~~~~~~~~
-../src/I2C/I2C.c:98:5: warning: 'ReadRegister' defined but not used [-Wunused-function]
- int ReadRegister(u8 *RegAddress, u8 *ReadBuffer, u8 ByteCount)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:66:5: warning: 'WriteRegister' defined but not used [-Wunused-function]
- int WriteRegister(u8 *RegNum, u8 *WriteValue,u16 ByteCount)
-     ^~~~~~~~~~~~~
-make: *** [src/I2C/I2C.o] Error 1
-18:12:49 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:132:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:299:12: error: invalid storage class for function 'SetupInterruptSystem'
- static int SetupInterruptSystem(XIic *IicInstPtr)
-            ^~~~~~~~~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'SetupInterruptSystem':
-../src/I2C/I2C.c:310:50: error: 'INTC_DEVICE_ID' undeclared (first use in this function)
-  Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
-                                                  ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:310:50: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/I2C.c:320:47: error: 'IIC_INTR_ID' undeclared (first use in this function)
-  Status = XIntc_Connect(&InterruptController, IIC_INTR_ID,
-                                               ^~~~~~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:374:13: error: invalid storage class for function 'SendHandler'
- static void SendHandler(XIic *InstancePtr)
-             ^~~~~~~~~~~
-../src/I2C/I2C.c:392:13: error: invalid storage class for function 'ReceiveHandler'
- static void ReceiveHandler(XIic *InstancePtr)
-             ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:411:13: error: invalid storage class for function 'StatusHandler'
- static void StatusHandler(XIic *InstancePtr, int Event)
-             ^~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'ConfigureI2C':
-../src/I2C/I2C.c:458:6: error: 'SLAVE_ADDRESS' undeclared (first use in this function)
-      SLAVE_ADDRESS);
-      ^~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:481:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:565:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:632:1: error: expected declaration or statement at end of input
- }
- ^
-../src/I2C/I2C.c: At top level:
-../src/I2C/I2C.c:24:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
- static void SendHandler(XIic *InstancePtr);
-             ^~~~~~~~~~~
-../src/I2C/I2C.c:25:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
- static void ReceiveHandler(XIic *InstancePtr);
-             ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:26:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
- static void StatusHandler(XIic *InstancePtr, int Event);
-             ^~~~~~~~~~~~~
-../src/I2C/I2C.c:27:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
- static int SetupInterruptSystem(XIic *IicInstPtr);
-            ^~~~~~~~~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:632:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-At top level:
-../src/I2C/I2C.c:562:5: warning: 'WriteData' defined but not used [-Wunused-function]
- int WriteData(u8 WriteBuffer[], u16 ByteCount)
-     ^~~~~~~~~
-../src/I2C/I2C.c:478:5: warning: 'ReadData' defined but not used [-Wunused-function]
- int ReadData(u8 *BufferPtr, u16 ByteCount)
-     ^~~~~~~~
-../src/I2C/I2C.c:417:5: warning: 'ConfigureI2C' defined but not used [-Wunused-function]
- int ConfigureI2C(void)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:208:5: warning: 'WriteI2CData' defined but not used [-Wunused-function]
- int WriteI2CData(u8 RegAdd[],u16 ByteCount)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:129:5: warning: 'ReadI2CData' defined but not used [-Wunused-function]
- int ReadI2CData(u8 BufferPtr[], u16 ByteCount)
-     ^~~~~~~~~~~
-../src/I2C/I2C.c:93:5: warning: 'ReadRegister' defined but not used [-Wunused-function]
- int ReadRegister(u8 *RegAddress, u8 *ReadBuffer, u8 ByteCount)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:61:5: warning: 'WriteRegister' defined but not used [-Wunused-function]
- int WriteRegister(u8 *RegNum, u8 *WriteValue,u16 ByteCount)
-     ^~~~~~~~~~~~~
-make: *** [src/I2C/I2C.o] Error 1
-18:13:45 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:132:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:299:12: error: invalid storage class for function 'SetupInterruptSystem'
- static int SetupInterruptSystem(XIic *IicInstPtr)
-            ^~~~~~~~~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'SetupInterruptSystem':
-../src/I2C/I2C.c:310:50: error: 'INTC_DEVICE_ID' undeclared (first use in this function)
-  Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
-                                                  ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:310:50: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/I2C.c:320:47: error: 'IIC_INTR_ID' undeclared (first use in this function)
-  Status = XIntc_Connect(&InterruptController, IIC_INTR_ID,
-                                               ^~~~~~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:374:13: error: invalid storage class for function 'SendHandler'
- static void SendHandler(XIic *InstancePtr)
-             ^~~~~~~~~~~
-../src/I2C/I2C.c:392:13: error: invalid storage class for function 'ReceiveHandler'
- static void ReceiveHandler(XIic *InstancePtr)
-             ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:411:13: error: invalid storage class for function 'StatusHandler'
- static void StatusHandler(XIic *InstancePtr, int Event)
-             ^~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'ConfigureI2C':
-../src/I2C/I2C.c:458:6: error: 'SLAVE_ADDRESS' undeclared (first use in this function)
-      SLAVE_ADDRESS);
-      ^~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:481:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:565:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:632:1: error: expected declaration or statement at end of input
- }
- ^
-../src/I2C/I2C.c: At top level:
-../src/I2C/I2C.c:24:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
- static void SendHandler(XIic *InstancePtr);
-             ^~~~~~~~~~~
-../src/I2C/I2C.c:25:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
- static void ReceiveHandler(XIic *InstancePtr);
-             ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:26:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
- static void StatusHandler(XIic *InstancePtr, int Event);
-             ^~~~~~~~~~~~~
-../src/I2C/I2C.c:27:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
- static int SetupInterruptSystem(XIic *IicInstPtr);
-            ^~~~~~~~~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:632:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-At top level:
-../src/I2C/I2C.c:562:5: warning: 'WriteData' defined but not used [-Wunused-function]
- int WriteData(u8 WriteBuffer[], u16 ByteCount)
-     ^~~~~~~~~
-../src/I2C/I2C.c:478:5: warning: 'ReadData' defined but not used [-Wunused-function]
- int ReadData(u8 *BufferPtr, u16 ByteCount)
-     ^~~~~~~~
-../src/I2C/I2C.c:417:5: warning: 'ConfigureI2C' defined but not used [-Wunused-function]
- int ConfigureI2C(void)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:208:5: warning: 'WriteI2CData' defined but not used [-Wunused-function]
- int WriteI2CData(u8 RegAdd[],u16 ByteCount)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:129:5: warning: 'ReadI2CData' defined but not used [-Wunused-function]
- int ReadI2CData(u8 BufferPtr[], u16 ByteCount)
-     ^~~~~~~~~~~
-../src/I2C/I2C.c:93:5: warning: 'ReadRegister' defined but not used [-Wunused-function]
- int ReadRegister(u8 *RegAddress, u8 *ReadBuffer, u8 ByteCount)
-     ^~~~~~~~~~~~
-../src/I2C/I2C.c:61:5: warning: 'WriteRegister' defined but not used [-Wunused-function]
- int WriteRegister(u8 *RegNum, u8 *WriteValue,u16 ByteCount)
-     ^~~~~~~~~~~~~
-make: *** [src/I2C/I2C.o] Error 1
-18:14:09 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:134:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'SetupInterruptSystem':
-../src/I2C/I2C.c:312:50: error: 'INTC_DEVICE_ID' undeclared (first use in this function)
-  Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
-                                                  ^~~~~~~~~~~~~~
-../src/I2C/I2C.c:312:50: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/I2C.c:322:47: error: 'IIC_INTR_ID' undeclared (first use in this function)
-  Status = XIntc_Connect(&InterruptController, IIC_INTR_ID,
-                                               ^~~~~~~~~~~
-../src/I2C/I2C.c: In function 'ConfigureI2C':
-../src/I2C/I2C.c:460:6: error: 'SLAVE_ADDRESS' undeclared (first use in this function)
-      SLAVE_ADDRESS);
-      ^~~~~~~~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:483:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:567:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:60:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/I2C/I2C.o] Error 1
-18:15:39 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:134:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'ConfigureI2C':
-../src/I2C/I2C.c:460:6: error: 'SLAVE_ADDRESS' undeclared (first use in this function)
-      SLAVE_ADDRESS);
-      ^~~~~~~~~~~~~
-../src/I2C/I2C.c:460:6: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:483:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:567:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:60:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/I2C/I2C.o] Error 1
-18:16:26 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:134:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:483:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:567:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:60:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-'Finished building: ../src/I2C/I2C.c'
+'Finished building: ../src/main.c'
 ' '
-'Building file: ../src/I2C/Si5338.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/Si5338.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/Si5338.d" -MT"src/I2C/Si5338.o" -o "src/I2C/Si5338.o" "../src/I2C/Si5338.c"
-../src/I2C/Si5338.c: In function 'Read_Si5338':
-../src/I2C/Si5338.c:13:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  int status;
-      ^~~~~~
-../src/I2C/Si5338.c: In function 'Write_Si5338':
-../src/I2C/Si5338.c:36:2: error: 'SentByteCount' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(XPAR_AXI_IIC_0_BASEADDR, SLAVE_ADDRESS, WriteBuffer, 2);
-  ^~~~~~~~~~~~~
-../src/I2C/Si5338.c:36:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/Si5338.c:36:18: error: too few arguments to function 'XIic_DynSend'
-  SentByteCount = XIic_DynSend(XPAR_AXI_IIC_0_BASEADDR, SLAVE_ADDRESS, WriteBuffer, 2);
-                  ^~~~~~~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic.h:325:0,
-                 from C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C/I2C.h:11,
-                 from ../src/I2C/Si5338.c:1:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xiic_l.h:583:10: note: declared here
- unsigned XIic_DynSend(UINTPTR BaseAddress, u16 Address, u8 *BufferPtr,
-          ^~~~~~~~~~~~
-make: *** [src/I2C/Si5338.o] Error 1
-18:17:43 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o:(.data.baseaddr_p+0x0): multiple definition of `baseaddr_p'
+./src/GPIOs/gpio.o:(.data.baseaddr_p+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [MicroBlaze-AXI4.elf] Error 1
+15:21:21 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
-'Building file: ../src/I2C/Si5338.c'
+'Building file: ../src/GPIOs/gpio.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/Si5338.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/Si5338.d" -MT"src/I2C/Si5338.o" -o "src/I2C/Si5338.o" "../src/I2C/Si5338.c"
-../src/I2C/Si5338.c: In function 'Read_Si5338':
-../src/I2C/Si5338.c:13:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  int status;
-      ^~~~~~
-../src/I2C/Si5338.c: In function 'Write_Si5338':
-../src/I2C/Si5338.c:36:2: error: 'SentByteCount' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(XPAR_AXI_IIC_0_BASEADDR, SLAVE_ADDRESS, WriteBuffer, 2, XIIC_STOP);
-  ^~~~~~~~~~~~~
-../src/I2C/Si5338.c:36:2: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/I2C/Si5338.o] Error 1
-18:19:12 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/Si5338.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/Si5338.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/Si5338.d" -MT"src/I2C/Si5338.o" -o "src/I2C/Si5338.o" "../src/I2C/Si5338.c"
-../src/I2C/Si5338.c: In function 'Read_Si5338':
-../src/I2C/Si5338.c:13:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  int status;
-      ^~~~~~
-../src/I2C/Si5338.c: In function 'Write_Si5338':
-../src/I2C/Si5338.c:30:16: warning: variable 'SentByteCount' set but not used [-Wunused-but-set-variable]
-  unsigned char SentByteCount;
-                ^~~~~~~~~~~~~
-../src/I2C/Si5338.c:40:5: warning: 'status' is used uninitialized in this function [-Wuninitialized]
-  if (status != XST_SUCCESS)
-     ^
-'Finished building: ../src/I2C/Si5338.c'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/GPIOs/gpio.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/GPIOs/gpio.d" -MT"src/GPIOs/gpio.o" -o "src/GPIOs/gpio.o" "../src/GPIOs/gpio.c"
+'Finished building: ../src/GPIOs/gpio.c'
 ' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 In file included from ../src/main.c:12:0:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/main.c:3:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/main.c:21:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/main.c'
+' '
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '
+15:21:45 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:12:0:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/main.c:3:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/main.c:21:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/main.c'
+' '
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '
+15:21:52 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:12:0:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/main.c:3:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/main.c:21:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/main.c'
+' '
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '
+15:22:01 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:12:0:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/main.c:3:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/main.c:21:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/main.c'
+' '
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '
+15:22:10 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:12:0:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/main.c:3:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/main.c:21:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/main.c'
+' '
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '
+15:22:54 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:7:0:
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
  #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
   ^~~~~~~
@@ -1201,178 +308,24 @@ In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.
 ' '
 'Building target: MicroBlaze-AXI4.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: MicroBlaze-AXI4.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  41748	   1620	   3800	  47168	   b840	MicroBlaze-AXI4.elf
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
 'Finished building: MicroBlaze-AXI4.elf.size'
 ' '
-18:21:58 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/Si5338.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/Si5338.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/Si5338.d" -MT"src/I2C/Si5338.o" -o "src/I2C/Si5338.o" "../src/I2C/Si5338.c"
-../src/I2C/Si5338.c: In function 'Read_Si5338':
-../src/I2C/Si5338.c:20:2: error: 'SentByteCount' undeclared (first use in this function)
-  SentByteCount = XIic_DynSend(XPAR_AXI_IIC_0_BASEADDR, SLAVE_ADDRESS, WriteBuffer, 1, XIIC_STOP);
-  ^~~~~~~~~~~~~
-../src/I2C/Si5338.c:20:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/Si5338.c:13:6: warning: unused variable 'status' [-Wunused-variable]
-  int status;
-      ^~~~~~
-../src/I2C/Si5338.c: In function 'Write_Si5338':
-../src/I2C/Si5338.c:31:16: warning: variable 'SentByteCount' set but not used [-Wunused-but-set-variable]
-  unsigned char SentByteCount;
-                ^~~~~~~~~~~~~
-make: *** [src/I2C/Si5338.o] Error 1
-18:22:14 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/Si5338.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/Si5338.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/Si5338.d" -MT"src/I2C/Si5338.o" -o "src/I2C/Si5338.o" "../src/I2C/Si5338.c"
-../src/I2C/Si5338.c: In function 'Read_Si5338':
-../src/I2C/Si5338.c:14:16: warning: variable 'SentByteCount' set but not used [-Wunused-but-set-variable]
-  unsigned char SentByteCount;
-                ^~~~~~~~~~~~~
-../src/I2C/Si5338.c:13:6: warning: unused variable 'status' [-Wunused-variable]
-  int status;
-      ^~~~~~
-../src/I2C/Si5338.c: In function 'Write_Si5338':
-../src/I2C/Si5338.c:32:16: warning: variable 'SentByteCount' set but not used [-Wunused-but-set-variable]
-  unsigned char SentByteCount;
-                ^~~~~~~~~~~~~
-../src/I2C/Si5338.c:42:5: warning: 'status' is used uninitialized in this function [-Wuninitialized]
-  if (status != XST_SUCCESS)
-     ^
-'Finished building: ../src/I2C/Si5338.c'
-' '
-'Building target: MicroBlaze-AXI4.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: MicroBlaze-AXI4.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  41748	   1620	   3800	  47168	   b840	MicroBlaze-AXI4.elf
-'Finished building: MicroBlaze-AXI4.elf.size'
-' '
-18:23:25 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
-                 from ../src/main.c:3:
-../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
-                                               ^
-../src/main.c:19:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
- Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
-                       ^
-'Finished building: ../src/main.c'
-' '
-'Building target: MicroBlaze-AXI4.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: MicroBlaze-AXI4.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  45344	   1620	   3796	  50760	   c648	MicroBlaze-AXI4.elf
-'Finished building: MicroBlaze-AXI4.elf.size'
-' '
-18:23:35 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
+15:33:58 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
 make: Nothing to be done for `all'.
-18:26:11 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
+15:35:15 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:55:9: error: 'status' undeclared (first use in this function)
-  return status;
-         ^~~~~~
-../src/I2C/I2C.c:55:9: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:130:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:479:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:563:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/I2C/I2C.o] Error 1
-18:26:28 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:55:9: error: 'status' undeclared (first use in this function)
-  return status;
-         ^~~~~~
-../src/I2C/I2C.c:55:9: note: each undeclared identifier is reported only once for each function it appears in
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:130:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:479:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:563:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'I2C_initialize':
-../src/I2C/I2C.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/I2C/I2C.o] Error 1
-18:26:46 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
-make all 
-'Building file: ../src/I2C/I2C.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/I2C/I2C.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/I2C/I2C.d" -MT"src/I2C/I2C.o" -o "src/I2C/I2C.o" "../src/I2C/I2C.c"
-../src/I2C/I2C.c: In function 'ReadI2CData':
-../src/I2C/I2C.c:130:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'ReadData':
-../src/I2C/I2C.c:479:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-../src/I2C/I2C.c: In function 'WriteData':
-../src/I2C/I2C.c:563:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
-  int BusBusy;
-      ^~~~~~~
-'Finished building: ../src/I2C/I2C.c'
-' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:12:0:
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:7:0:
 ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
  #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
   ^~~~~~~
@@ -1391,15 +344,45 @@ In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.
 ' '
 'Building target: MicroBlaze-AXI4.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: MicroBlaze-AXI4.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  40956	   1572	   3512	  46040	   b3d8	MicroBlaze-AXI4.elf
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
 'Finished building: MicroBlaze-AXI4.elf.size'
 ' '
-18:26:55 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
+15:35:38 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:6:0:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/main.c:2:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/main.c:18:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/main.c'
+' '
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '

@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "sleep.h"
+#include "xuartlite.h"
+#include "uart.h.h"
+
+
+
+
+void configUART(void)
+{
+	int Status;
+
+	/*
+	 * Initialize the UartLite driver so that it is ready to use.
+	 */
+	Status = XUartLite_Initialize(&UartLite, XPAR_UARTLITE_0_DEVICE_ID);
+	if (Status != XST_SUCCESS)
+	{
+	 xil_printf("Failed to initialize UART \n");
+	}
+
+

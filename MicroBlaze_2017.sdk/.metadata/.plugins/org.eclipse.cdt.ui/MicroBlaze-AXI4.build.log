@@ -1,6 +1,36 @@
-18:26:55 **** Incremental Build of configuration Debug for project MicroBlaze-AXI4 ****
+15:35:38 **** Auto Build of configuration Debug for project MicroBlaze-AXI4 ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../MicroBlaze-AXI4_bsp/microblaze_0/include -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\SPI" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\I2C" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\GPIOs" -I"C:\Users\fmabrouk\Documents\FPGA\MicroBlaze_2017\MicroBlaze_2017.sdk\MicroBlaze-AXI4\src\UART" -c -fmessage-length=0 -MT"src/main.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:6:0:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../../MicroBlaze-AXI4_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../src/main.c:2:
+../../MicroBlaze-AXI4_bsp/microblaze_0/include/xparameters.h:544:47: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR 0x44A00000
+                                               ^
+../src/main.c:18:23: note: in expansion of macro 'XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR'
+ Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+                       ^
+'Finished building: ../src/main.c'
+' '
+'Building target: MicroBlaze-AXI4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-AXI4_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-AXI4.elf"  ./src/UART/uart.o  ./src/SPI/spi.o  ./src/I2C/I2C.o ./src/I2C/Si5338.o  ./src/GPIOs/gpio.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: MicroBlaze-AXI4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size MicroBlaze-AXI4.elf  |tee "MicroBlaze-AXI4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41012	   1572	   3512	  46096	   b410	MicroBlaze-AXI4.elf
+'Finished building: MicroBlaze-AXI4.elf.size'
+' '
 
-18:26:55 Build Finished (took 362ms)
+15:35:40 Build Finished (took 1s.821ms)
 

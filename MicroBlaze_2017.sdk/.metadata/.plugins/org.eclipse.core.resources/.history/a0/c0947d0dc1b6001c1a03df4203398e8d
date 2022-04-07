@@ -1,0 +1,18 @@
+#ifndef _GPIO_H_
+#define _GPIO_H_
+
+#include "xbasic_types.h"
+
+
+Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
+XGpio gpio;
+
+
+void driverInit(void);
+void configGPIO(void);
+void GpiosControl(void);
+
+
+
+
+#endif

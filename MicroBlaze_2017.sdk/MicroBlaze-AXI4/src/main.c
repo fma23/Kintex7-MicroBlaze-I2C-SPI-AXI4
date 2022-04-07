@@ -1,62 +1,23 @@
 #include <stdio.h>
-#include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
-#include "xgpio.h"
-#include "sleep.h"
-#include "xuartlite.h"
-
-#include "xiic.h"
 #include "xil_exception.h"
 #include "xintc.h"
 #include "xbasic_types.h"
 #include "spi.h"
 #include "i2c.h"
+#include "gpio.h"
+#include "uart.h"
 
 #include "main.h"
 #include "Si5338.h"
 
+
+
+
 Xuint32 *baseaddr_p = XPAR_ADDER_AXI4_IP_0_S00_AXI_BASEADDR;
 
-XUartLite UartLite;
-XGpio gpio;
-static XSpi  SpiInstance;	 /* The instance of the SPI device */
 
-extern int ReadRegister(u8 RegAddress[], u8 ReadBuffer[], u8 ByteCount);
-extern s32 ReadPLLRegisters(u8 WriteBuffer[], u8 ReadBuffer[], int ByteCount);
-
-u8 WriteByte(u8 *BufferPtr, u8 ByteCount);
-
-
-void driverInit(void)
-{
-	int status;
-	status = XGpio_Initialize(&gpio,XPAR_AXI_GPIO_0_DEVICE_ID);
-	if(status != XST_SUCCESS)
-	{
-		printf("failed to initialize GPIO \n");
-	}
-}
-
-void configGPIO(void)
-{
-	XGpio_SetDataDirection(&gpio,1, 0);
-}
-
-
-void configUART(void)
-{
-	int Status;
-
-	/*
-	 * Initialize the UartLite driver so that it is ready to use.
-	 */
-	Status = XUartLite_Initialize(&UartLite, XPAR_UARTLITE_0_DEVICE_ID);
-	if (Status != XST_SUCCESS)
-	{
-	 xil_printf("Failed to initialize UART \n");
-	}
-}
 
 int main()
 {
@@ -103,12 +64,9 @@ int main()
     {
 		 counter++;
 
-		 XGpio_DiscreteWrite(&gpio,2,0x00000000);  //this is to enable Uart communication: GPIO 2 is used
+		 //toggle gpios
+		 GpiosControl();
 
-		 XGpio_DiscreteWrite(&gpio,1,0x00000003);  //GPIO1 is used for LEDs control
-		 sleep(1);
-		 XGpio_DiscreteWrite(&gpio,1,0);
-		 sleep(1);
 		 xil_printf("loop counter %d\n", counter);
 
 
